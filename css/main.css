@@ -1,0 +1,82 @@
+/* Body style */
+body {
+  background: #7ca3f7;
+  background: -webkit-linear-gradient(to right, #b0b5b9, #948f94);
+  background: linear-gradient(to right, #ccdbe9, #d3dee7);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar style */
+body::-webkit-scrollbar {
+  width: 0.65rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #a0c2ff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6898d6;
+}
+
+/* Content behavior Sidebar hidden */
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+/* Content behavior Sidebar visible */
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+/* Sidebar style*/
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  background: linear-gradient(to right, #80a4d4, #a0c2ff);
+}
+
+/* Efeito itens menu */
+a:hover{
+  background: linear-gradient(to right, #709eda, #a0c2ff);
+}
+
+
+/* Toggle Menu behavior onclick buttom */
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+/* Toggle Menu behavior small screen  */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}
+
+/* Toggle button style */
+#sidebarCollapse{
+  background: linear-gradient(to right, #80a4d4, #a0c2ff);
+}
+
+
